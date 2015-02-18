@@ -9,17 +9,14 @@ angular.module('WIAW.login', ['ngRoute'])
 		});
 	}])
 
-	.controller('LoginCtrl', ['$scope', '$location', 'LoginService', '$window', function($scope, $location, LoginService, $window) {
+	.controller('LoginCtrl', ['$rootScope', '$scope', '$location', 'LoginService', '$window', function($rootScope, $scope, $location, LoginService, $window) {
 		$scope.login = function (username, password) {
 			LoginService.login(username, password).then(function(data) {
-				$window.localStorage.removeItem('user');
-                $window.localStorage.setItem('user', JSON.stringify({ name: data.user.name, email: data.user.username, phone: data.user.phone }));
 				$location.path('/');
 			})
 		};
 
 		$scope.logout = function () {
-            $window.localStorage.removeItem('user');
 			LoginService.logout();
 			$location.path('/');
 		}

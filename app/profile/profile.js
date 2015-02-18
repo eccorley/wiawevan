@@ -10,5 +10,5 @@ angular.module('WIAW.profile', ['ngRoute'])
 }])
 
 .controller('ProfileCtrl', ['$scope', '$window', function($scope, $window) {
-    $scope.user = JSON.parse($window.localStorage.getItem('user'));
+    $scope.user = JSON.parse($window.localStorage.getItem('wiawuser'));
 }]);

@@ -1,0 +1,11 @@
+<nav class="top-bar" data-topbar role="navigation">
+    <ul class="title-area">
+        <li class="name">
+            <h1><a href="#">Who Is At Work</a></h1>
+        </li>
+    </ul>
+    <ul ng-if="user" class="right">
+        <li>Welcome, {{ user.name }}</li>
+        <li id="logout" ng-click="logout()">Logout</li>
+    </ul>
+</nav>

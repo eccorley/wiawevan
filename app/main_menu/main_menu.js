@@ -9,6 +9,8 @@ angular.module('WIAW.main_menu', ['ngRoute'])
   });
 }])
 
-.controller('MainMenuCtrl', [function() {
-
+.controller('MainMenuCtrl', ['$rootScope', '$window', function($rootScope, $window) {
+    if ($window.localStorage.getItem('wiawuser') !== null) {
+      $rootScope.user = JSON.parse($window.localStorage.getItem('wiawuser'));
+    }
 }]);

@@ -21,7 +21,8 @@ angular.module('WIAW', [
   'WIAW.add_department',
   'WIAW.add_location',
   'WIAW.add_task',
-  'WIAW.db_service'
+  'WIAW.db_service',
+  'WIAW.topbar_directive'
 ]).
 config(['$routeProvider', function($routeProvider) {
   $routeProvider

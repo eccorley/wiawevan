@@ -40,6 +40,18 @@ div.panel {
   margin-bottom: 100px;
 }
 
+nav ul.right li {
+  line-height: 45px;
+  color: #ddd;
+  display: inline;
+  padding: 1em;
+}
+
+nav ul.right li#logout {
+  margin-right: 1.5em;
+  cursor: pointer;
+}
+
 /* --------------- Main Menu --------------- */
 
 div.menu-wrap {
