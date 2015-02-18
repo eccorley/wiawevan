@@ -12,6 +12,8 @@ var LocalStrategy = require('passport-local').Strategy;
 
 var app = express();
 
+process.env.PWD = process.cwd();
+
 // uncomment after placing your favicon in /public
 //app.use(favicon(__dirname + '/public/favicon.ico'));
 app.use(logger('dev'));
@@ -20,8 +22,8 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(session({ keys: ['secretkey1', 'secretkey2', '...']}));
 
-app.use(express.static(path.join(__dirname, 'app')));
-app.use(express.static(path.join(__dirname, 'bower_components')));
+app.use(express.static(path.join(process.env.PWD, 'app')));
+app.use(express.static(path.join(process.env.PWD, 'bower_components')));
 
 // Configure passport middleware
 app.use(passport.initialize());
