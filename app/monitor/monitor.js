@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('myApp.monitor', ['ngRoute'])
+angular.module('WIAW.monitor', ['ngRoute'])
 
 .config(['$routeProvider', function($routeProvider) {
   $routeProvider.when('/monitor', {

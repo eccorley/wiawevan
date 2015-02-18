@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('myApp.employee_setup', ['ngRoute'])
+angular.module('WIAW.employee_setup', ['ngRoute'])
 
 	.config(['$routeProvider', function($routeProvider) {
 		$routeProvider.when('/employee_setup', {

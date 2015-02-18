@@ -1,0 +1,24 @@
+<h2><a href="#/"><span class="fi-home home-button"></span></a> Company 1 <a href="#/add_location"><span id="add-button" class="fi-plus"></span></a></h2>
+<h3>Locations</h3>
+<div class="row">
+    <div id="map-wrap" class="small-8 column small-centered radius">
+        <div class="inner-addon left-addon">
+            <i class="fi-magnifying-glass"></i>
+            <input id="location-search" type="text" placeholder="Find Location" ng-model="searchQuery" ng-keyup="searchLocations($event)" />
+        </div>
+    </div>
+    <div id="location-search-results" class="panel small-4 small-centered radius column">
+        <span ng-show="!location">No Locations</span>
+        <ul ng-show="location">
+            <li>Name: {{ location.name }}</li>
+            <li>Address: {{ location.address }}</li>
+            <li>City: {{ location.city }}</li>
+            <li>State: {{ location.state }}</li>
+            <li>Zip: {{ location.zip }}</li>
+            <li>Company: {{ location.company.name }}</li>
+            <li>Department: {{ location.department.name }}</li>
+
+        </ul>
+    </div>
+</div>
+<div ng-include src="'shared/footer.html'"></div>

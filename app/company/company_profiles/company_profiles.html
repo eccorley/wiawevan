@@ -1,0 +1,16 @@
+<h2><a href="#/"><span class="fi-home home-button"></span></a> Company 1<a href="#/add_company"><span id="add-button" class="fi-plus"></span></a></h2>
+<h3>Company Set Up</h3>
+<div class="row">
+    <div class="small-8 column small-centered radius">
+        <input id="company-profile-search" type="text" placeholder="Company Name" ng-model="searchQuery" ng-keyup="searchCompanies($event)" />
+    </div>
+    <div id="company-search-results" class="search-results panel small-4 small-centered radius column">
+        <span ng-show="!company">No Data Available!</span>
+        <ul ng-show="company">
+            <li>{{ company.name }}</li>
+            <li>{{ company.address }}</li>
+            <li>{{ company.phone }}</li>
+        </ul>
+    </div>
+</div>
+<div ng-include src="'shared/footer.html'"></div>

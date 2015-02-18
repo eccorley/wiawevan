@@ -399,6 +399,14 @@ footer ul li {
 
 }
 
+footer ul li a {
+  color: white;
+}
+
+footer ul li a:hover {
+  color: #aaa;
+}
+
 div.tab-wrap {
   display: -webkit-inline-flex;
   display: -moz-inline-box;

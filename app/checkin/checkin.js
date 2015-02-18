@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('myApp.checkin', ['ngRoute'])
+angular.module('WIAW.checkin', ['ngRoute'])
 
 .config(['$routeProvider', function($routeProvider) {
   $routeProvider.when('/checkin', {

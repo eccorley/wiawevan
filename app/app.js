@@ -1,29 +1,29 @@
 'use strict';
 
 // Declare app level module which depends on views, and components
-angular.module('myApp', [
+angular.module('WIAW', [
   'ngRoute',
-  'myApp.view1',
-  'myApp.profile',
-  'myApp.checkin',
-  'myApp.monitor',
-  'myApp.setup',
-  'myApp.reports',
-  'myApp.company_profiles',
-  'myApp.company_locations',
-  'myApp.department_setup',
-  'myApp.employee_setup',
-  'myApp.task_setup',
-  'myApp.login',
-  'myApp.login_service',
-  'myApp.register',
-  'myApp.add_company',
-  'myApp.add_department',
-  'myApp.add_location',
-  'myApp.add_task',
-  'myApp.db_service'
+  'WIAW.main_menu',
+  'WIAW.profile',
+  'WIAW.checkin',
+  'WIAW.monitor',
+  'WIAW.setup_menu',
+  'WIAW.reports',
+  'WIAW.company_profiles',
+  'WIAW.company_locations',
+  'WIAW.department_setup',
+  'WIAW.employee_setup',
+  'WIAW.task_setup',
+  'WIAW.login',
+  'WIAW.login_service',
+  'WIAW.register',
+  'WIAW.add_company',
+  'WIAW.add_department',
+  'WIAW.add_location',
+  'WIAW.add_task',
+  'WIAW.db_service'
 ]).
 config(['$routeProvider', function($routeProvider) {
   $routeProvider
-    .otherwise({redirectTo: '/view1'});
+    .otherwise({redirectTo: '/main_menu'});
 }]);

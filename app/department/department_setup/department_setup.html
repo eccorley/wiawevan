@@ -1,0 +1,16 @@
+<h2><a href="#/"><span class="fi-home home-button"></span></a> Company 1 <a href="#/add_department"><span id="add-button" class="fi-plus"></span></a></h2>
+<h3>Department Profiles</h3>
+<div class="row">
+    <div class="small-8 column small-centered radius">
+        <input id="department-search" type="text" placeholder="Department Name" ng-model="searchQuery" ng-keyup="searchDepartments($event)" />
+    </div>
+    <div id="department-search-results" class="search-results panel small-4 small-centered radius column">
+        <span ng-show="!department">No Data Available!</span>
+        <ul ng-show="department">
+            <li>Name: {{ department.name }}</li>
+            <li>Company Name: {{ department.company.name }}</li>
+            <li>Company Phone: {{ department.company.phone }}</li>
+        </ul>
+    </div>
+</div>
+<div ng-include src="'shared/footer.html'"></div>

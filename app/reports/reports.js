@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('myApp.reports', ['ngRoute'])
+angular.module('WIAW.reports', ['ngRoute'])
 
 .config(['$routeProvider', function($routeProvider) {
   $routeProvider.when('/reports', {
