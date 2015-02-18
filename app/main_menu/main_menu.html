@@ -7,6 +7,8 @@
         <a href="#/checkin"><div id="check-in"><div class="fi-clock"></div>Check-In</div></a>
     </ul>
 </div>
-<a href="#/login">Log In</a>
-<h3>or</h3>
-<a href="#/register">Register</a>
+<div ng-if="!user">
+    <a href="#/login">Log In</a>
+    <h3>or</h3>
+    <a href="#/register">Register</a>
+</div>
