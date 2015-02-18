@@ -27,9 +27,14 @@ router.post('/register', function(req, res, next) {
   User.register(new User({ name: req.body.name, username: req.body.username, phone: req.body.phone }), req.body.password, function(err) {
     if (err) { console.log('error while user register!', err); return next(err); }
 
-    console.log('user registered!', req.user);
+    console.log('user registered!');
+    var user = {
+      name: req.body.name,
+      username: req.body.username,
+      phone: req.body.phone
+    };
 
-    res.status(200).json({message: 'User registered'})
+    res.status(200).json({message: 'User registered', user: user});
   });
 });
 
