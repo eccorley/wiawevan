@@ -1,0 +1,11 @@
+<h2><a href="#/"><span class="fi-home home-button"></span></a> Add Department</h2>
+<div class="row">
+    <div class="panel small-4 small-centered radius column">
+        <form id="add-department-form" name="add-department" ng-submit="addDepartment(name, company)">
+            <input type="text" name="name" placeholder="Department Name" ng-model="name"/>
+            <input type="text" name="company" placeholder="Company Name" ng-model="company"/>
+            <input type="submit" class="small button secondary" value="Add Department"/>
+        </form>
+        <a href="#/department_setup"><input class="small button secondary" value="Browse Departments" type="submit"/></a>
+    </div>
+</div>

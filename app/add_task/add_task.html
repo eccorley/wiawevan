@@ -1,0 +1,15 @@
+<h2><a href="#/"><span class="fi-home home-button"></span></a> Add Task</h2>
+<div class="row">
+    <div class="panel small-4 small-centered radius column">
+        <form id="add-task-form" name="add-task" ng-submit="addTask(name, hours, company, department, location, employee)">
+            <input type="text" name="name" placeholder="Task Name" ng-model="name"/>
+            <input name="hours" placeholder="Work Hours" ng-model="hours" type="text"/>
+            <input type="text" name="company" placeholder="Company Name" ng-model="company"/>
+            <input type="text" name="department" placeholder="Department Name" ng-model="department"/>
+            <input type="text" name="location" placeholder="Location Name" ng-model="location"/>
+            <input type="text" name="employee" placeholder="Employee Name" ng-model="employee"/>
+            <input type="submit" class="small button secondary" value="Add Task"/>
+        </form>
+        <a href="#/task_setup"><input class="small button secondary" value="Browse Tasks" type="submit"/></a>
+    </div>
+</div>

@@ -1,0 +1,44 @@
+<h2><a href="#/"><span class="fi-home home-button"></span></a> Company 1</h2>
+<h3>Employee Search</h3>
+<div class="row">
+    <div class="small-8 column small-centered radius">
+        <input id="employee_setup_search" type="text" placeholder="Employee Name" ng-model="searchQuery" ng-keyup="searchEmployees($event)" />
+    </div>
+    <div class="panel small-4 small-centered radius column">
+        <span ng-show="!employee">No Data Available!</span>
+        <ul ng-show="employee">
+            <li>Name: {{ employee.name }}</li>
+            <li>Email: {{ employee.email }}</li>
+        </ul>
+    </div>
+</div>
+<footer>
+    <ul>
+        <li>
+            <div class="tab-wrap">
+                <span class="fi-database glyph"></span><span>Companies</span>
+            </div>
+        </li>
+        <li>
+            <div class="tab-wrap">
+                <span class="fi-marker glyph"></span><span>Locations</span>
+            </div>
+        </li>
+
+        <li>
+            <div class="tab-wrap">
+                <span class="fi-shopping-bag glyph"></span><span>Departments</span>
+            </div>
+        </li>
+        <li>
+            <div class="tab-wrap">
+                <span class="fi-torsos-all glyph"></span><span>Employees</span>
+            </div>
+        </li>
+        <li>
+            <div class="tab-wrap">
+                <span class="fi-list-thumbnails glyph"></span><span>Tasks</span>
+            </div>
+        </li>
+    </ul>
+</footer>

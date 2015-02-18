@@ -1,0 +1,28 @@
+<h2><a href="#/"><span class="fi-home home-button"></span></a> Check-In</h2>
+<div class="row">
+    <div class="panel small-4 small-centered radius column">
+        <ul class="pricing-table">
+            <li ng-repeat="task in tasks track by $index" class="bullet-item" ng-click="setSelected(task)" ng-class="{selected: task === taskSelected}">{{ task.name }}</li>
+            <li class="cta-button"><a class="button secondary" href="#/add_task">Add a Task <span class="fi-plus"></span></a></li>
+        </ul>
+        <h4>Manual Log</h4>
+        <div class="small-6 columns"><input type="time" ng-model="start"/></div>
+        <div class="small-6 columns"><input type="time" ng-model="end"/></div>
+        <div class="small-12 column small-centered" id="check-in-wrap">
+            <div class="check-in" ng-click="checkIn()">
+                <a class="check-in" href="">
+                <div id="check-in-inner">
+                    <span class="fi-check"></span><span id="checkin-text">In</span>
+                </div>
+                </a>
+            </div>
+        </div>
+        <hr/>
+        <h4>Attendance Log</h4>
+        <div class="small-12 column small-centered search-results" id="attendance-log-wrap">
+            <ul id="attendance-log">
+                <li ng-repeat="entry in taskSelected.log">{{ taskSelected.name}} <span id="log-time">{{ entry.hours }}</span><br><small>{{ entry.timestamp | date: "shortDate"}}</small></li>
+            </ul>
+        </div>
+    </div>
+</div>
