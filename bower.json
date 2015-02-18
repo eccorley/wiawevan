@@ -1,0 +1,23 @@
+{
+  "name": "WIAW",
+  "version": "0.0.0",
+  "homepage": "https://github.com/eccorley/wiawevan",
+  "authors": [
+    "Evan Corley <eccorley@gmail.com>"
+  ],
+  "main": "app.js",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "html5-boilerplate": "~5.0.0",
+    "angular": "~1.3.13",
+    "foundation": "5.4.7",
+    "angular-route": "~1.3.13"
+  }
+}

@@ -21,6 +21,7 @@ app.use(cookieParser());
 app.use(session({ keys: ['secretkey1', 'secretkey2', '...']}));
 
 app.use(express.static(path.join(__dirname, 'app')));
+app.use(express.static(path.join(__dirname, 'bower_components')));
 
 // Configure passport middleware
 app.use(passport.initialize());
