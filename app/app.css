@@ -218,10 +218,6 @@ div#check-in-inner {
   border: 2px solid #aaa;
 }
 
-div.check-in:hover, div#check-in-inner:hover {
-  background-color: #bbb;
-}
-
 div#check-in-inner > span.fi-check {
   font-size: 1.5em;
   margin-right: 5px;
