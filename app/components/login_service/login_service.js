@@ -26,7 +26,7 @@ angular.module('WIAW.login_service', [])
 				$http.post('/login', {username: username, password: password})
 					.success(function (data) {
 						if (data.user) {
-							var user = { name: data.user.name, email: data.user.username, phone: data.user.phone };
+							var user = { name: data.user.name, email: data.user.email, phone: data.user.phone };
 							$rootScope.user = user;
 							$window.localStorage.setItem('wiawuser', JSON.stringify(user));
 							defer.resolve(data);

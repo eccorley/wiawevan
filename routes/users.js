@@ -49,7 +49,7 @@ router.post('/login', function(req, res, next) {
     if (! user) {
       return res.send({ success : false, message : 'authentication failed'});
     }
-    return res.send({ success : true, message : 'authentication succeeded', user: req.user });
+    return res.send({ success : true, message : 'authentication succeeded', user: {name: user.name, email: user.username, phone: user.phone } });
   })(req, res, next);
 });
 

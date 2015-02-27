@@ -13,7 +13,6 @@ angular.module('WIAW.login', ['ngRoute'])
 		$scope.login = function (username, password) {
 			$scope.formError = false;
 			LoginService.login(username, password).then(function(data) {
-				console.log(data);
 				$location.path('/');
 			}, function (data) {
 				$scope.formError = true;
