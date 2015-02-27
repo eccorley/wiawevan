@@ -38,7 +38,7 @@ div.row > div {
 
 div.panel {
   margin-bottom: 100px;
-  box-shadow: 0 2px px rgba(0,0,0,0.4);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.4);
 }
 
 nav .title-area {
@@ -90,7 +90,7 @@ div.menu-wrap {
   width: 254px;
   border: 2px solid #bbb;
   border-radius: 100%;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.4);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.4);
 }
 
 ul.main-menu div {
@@ -440,7 +440,6 @@ footer ul li {
   display: inline;
   color: white;
   margin: 0 12px;
-
 }
 
 footer ul li a {
