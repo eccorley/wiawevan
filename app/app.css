@@ -38,7 +38,7 @@ div.row > div {
 
 div.panel {
   margin-bottom: 100px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.4);
+  box-shadow: 0 2px px rgba(0,0,0,0.4);
 }
 
 nav .title-area {
@@ -473,8 +473,8 @@ div.tab-wrap span.glyph {
 }
 
 div#map-wrap {
-  height: 18em;
-  width: 22em;
+  height: 17em;
+  width: 20em;
   margin-bottom: 5px;
 }
 
