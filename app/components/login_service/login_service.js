@@ -8,21 +8,31 @@ angular.module('WIAW.login_service', [])
 				var defer = $q.defer();
 				$http.post('/register', {name: name, username: username, password: password, phone: phone})
 					.success(function (data) {
-						var user = { name: data.user.name, email: data.user.username, phone: data.user.phone };
-						$rootScope.user = user;
-						$window.localStorage.setItem('wiawuser', JSON.stringify(user));
-						defer.resolve(data);
-					});
+						if (data.user) {
+							var user = { name: data.user.name, email: data.user.username, phone: data.user.phone };
+							$rootScope.user = user;
+							$window.localStorage.setItem('wiawuser', JSON.stringify(user));
+							defer.resolve(data);
+						} else {
+							defer.reject(data);
+						}
+					}).error(function (err) {
+							defer.reject(err);
+						});
 				return defer.promise;
 			},
 			login: function (username, password) {
 				var defer = $q.defer();
 				$http.post('/login', {username: username, password: password})
 					.success(function (data) {
-						var user = { name: data.user.name, email: data.user.username, phone: data.user.phone };
-						$rootScope.user = user;
-						$window.localStorage.setItem('wiawuser', JSON.stringify(user));
-						defer.resolve(data);
+						if (data.user) {
+							var user = { name: data.user.name, email: data.user.username, phone: data.user.phone };
+							$rootScope.user = user;
+							$window.localStorage.setItem('wiawuser', JSON.stringify(user));
+							defer.resolve(data);
+						} else {
+							defer.reject(data);
+						}
 					});
 				return defer.promise;
 			},

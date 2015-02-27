@@ -38,18 +38,49 @@ div.row > div {
 
 div.panel {
   margin-bottom: 100px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.4);
+}
+
+nav .title-area {
+  position: absolute;
+  width: 10em;
+  left: .3em;
+}
+
+nav .title-area li.name h1 a {
+  padding: 0;
 }
 
 nav ul.right li {
+  font-size: .9em;
   line-height: 45px;
   color: #ddd;
   display: inline;
-  padding: 1em;
+  padding: .25em;
 }
 
 nav ul.right li#logout {
-  margin-right: 1.5em;
+  margin-right: 1em;
   cursor: pointer;
+}
+
+div.form-error {
+  background-color: rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 3px;
+  padding: .75em;
+  width: 90%;
+  margin: 0 auto 1.5em auto;
+
+}
+
+div.form-error p {
+  font: italic 300 1em 'Helvetica Neue';
+  margin: 0;
+}
+
+input:required:invalid {
+  border: 1px solid rgba(0,0,0,0.15);
 }
 
 /* --------------- Main Menu --------------- */
@@ -59,6 +90,7 @@ div.menu-wrap {
   width: 254px;
   border: 2px solid #bbb;
   border-radius: 100%;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.4);
 }
 
 ul.main-menu div {
@@ -441,9 +473,8 @@ div.tab-wrap span.glyph {
 }
 
 div#map-wrap {
-  height: 15em;
-  width: 15em;
-  background-image: url('https://maps.googleapis.com/maps/api/staticmap?center=Sunnyvale,CA&zoom=13&size=600x300&maptype=roadmap');
+  height: 18em;
+  width: 22em;
   margin-bottom: 5px;
 }
 

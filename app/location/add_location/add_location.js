@@ -13,7 +13,6 @@ angular.module('WIAW.add_location', ['ngRoute'])
 		$scope.addLocation = function (name, address, city, state, zip, company, department) {
 			DbService.addLocation(name, address, city, state, zip, company, department)
 				.then(function(data) {
-					console.log(data);
 					$scope.name = '';
 					$scope.address = '';
 					$scope.city = '';

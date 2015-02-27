@@ -1,7 +1,7 @@
 <h2><a href="#/"><span class="fi-home home-button"></span></a> Add Location</h2>
 <div class="row">
     <div class="panel small-4 small-centered radius column">
-        <form id="add-location-form" name="add-location" ng-submit="addLocation()">
+        <form id="add-location-form" name="add-location" ng-submit="addLocation(name, address, city, state, zip, company, department)">
             <input type="text" name="name" placeholder="Location Name" ng-model="name"/>
             <input type="text" name="address" placeholder="Street Address" ng-model="address"/>
             <input type="text" name="city" placeholder="City" ng-model="city"/>
@@ -9,7 +9,7 @@
             <input type="text" name="zip" placeholder="Zip Code" ng-model="zip"/>
             <input type="text" name="company" placeholder="Company Name" ng-model="company"/>
             <input type="text" name="department" placeholder="Department Name" ng-model="department"/>
-            <input type="submit" class="small button secondary" value="Add Location" ng-model="location"/>
+            <input type="submit" class="small button secondary" value="Add Location"/>
         </form>
         <a href="#/company_locations"><input type="submit" class="small button secondary" value="Browse Locations"/></a>
     </div>

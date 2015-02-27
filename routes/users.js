@@ -25,21 +25,32 @@ router.post('/search_employees', function(req, res) {
 router.post('/register', function(req, res, next) {
   console.log('registering user');
   User.register(new User({ name: req.body.name, username: req.body.username, phone: req.body.phone }), req.body.password, function(err) {
-    if (err) { console.log('error while user register!', err); return next(err); }
-
-    console.log('user registered!');
-    var user = {
-      name: req.body.name,
-      username: req.body.username,
-      phone: req.body.phone
-    };
-
-    res.status(200).json({message: 'User registered', user: user});
+    if (err) {
+      console.log('Error During Registration', err);
+      res.status(409).json({message: err.message});
+    } else {
+      console.log('user registered!');
+      var user = {
+        name: req.body.name,
+        username: req.body.username,
+        phone: req.body.phone
+      };
+      res.status(200).json({message: 'User registered', user: user});
+    }
   });
 });
 
-router.post('/login', passport.authenticate('local'), function(req, res) {
-  res.status(200).json({message: 'Log in Complete', user: req.user})
+router.post('/login', function(req, res, next) {
+  passport.authenticate('local', function(err, user, info) {
+    if (err) {
+      return next(err); // will generate a 500 error
+    }
+    // Generate a JSON response reflecting authentication status
+    if (! user) {
+      return res.send({ success : false, message : 'authentication failed'});
+    }
+    return res.send({ success : true, message : 'authentication succeeded', user: req.user });
+  })(req, res, next);
 });
 
 router.get('/logout', function(req, res) {

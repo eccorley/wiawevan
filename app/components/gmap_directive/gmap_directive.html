@@ -1,0 +1,37 @@
+<style>
+    google-map, [google-map] {
+        display: block;
+        height: 100%;
+        width: 100%;
+        position: relative;
+    }
+
+    google-map > div#map {
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.4);
+        text-transform: capitalize;
+    }
+    google-map > div.inner-addon {
+        position: absolute;
+        top: 5%;
+        width: 70%;
+        left: 15%;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.4);
+        margin: 0;
+        background-color: rgba(0,0,0,0.0);
+        z-index: 10000;
+    }
+
+    input#location-search {
+        margin-bottom: 0;
+    }
+</style>
+<div class="inner-addon left-addon">
+    <i class="fi-magnifying-glass"></i>
+    <input id="location-search" type="text" placeholder="Find Location" ng-model="searchQuery" ng-keyup="searchLocations($event)" />
+</div>
+<div id="map"></div>
+<div id="directionsPanel"></div>
