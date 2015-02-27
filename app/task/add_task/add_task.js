@@ -13,7 +13,6 @@ angular.module('WIAW.add_task', ['ngRoute'])
 		$scope.addTask = function (name, hours, company, department, location, employee) {
 			DbService.addTask(name, hours, company, department, location, employee)
 				.then(function(data) {
-					console.log(data);
 					$scope.name = '';
 					$scope.hours = '';
 					$scope.company = '';

@@ -38,6 +38,7 @@ router.post('/search_tasks', function(req, res) {
 		});
 });
 
+// TODO: check why tasks not showing up at check-in
 router.post('/add_task', function(req, res, next) {
 	for (var prop in req.body) {
 		console.log(typeof req.body[prop]);

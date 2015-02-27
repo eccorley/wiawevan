@@ -23,7 +23,8 @@ angular.module('WIAW.checkin', ['ngRoute'])
 
     $scope.checkIn = function () {
         var prevId = $scope.taskSelected._id;
-        var hours = ($scope.end - $scope.start) > 0 ? ($scope.end - $scope.start) : ((+$scope.end + 12) - $scope.start);
+        var hours = ($scope.end - $scope.start) > 0 ? ($scope.end - $scope.start) : (($scope.end + 12) - $scope.start);
+
 
         DbService.checkIn({name: $scope.taskSelected.name, hours: hours, timestamp: new Date() }).then(function (data) {
             console.log(data);
